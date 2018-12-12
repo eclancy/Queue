@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2018 James Tanner
- */
-
 #!/usr/bin/env groovy
 
 pipeline {
