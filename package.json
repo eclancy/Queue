@@ -1,0 +1,26 @@
+{
+  "name": "@eclancy/practice",
+  "version": "0.0.1",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eclancy/PracticeWebsite.git"
+  },
+  "author": "Eric Clancy <ericlclancy@gmail.com >",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/eclancy/PracticeWebsite/issues"
+  },
+  "homepage": "https://eclancy.tanndev.com",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http-errors": "^1.7.1",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3",
+    "serve-favicon": "^2.5.0"
+  }
+}
