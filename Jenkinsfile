@@ -24,10 +24,11 @@ pipeline {
                     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
                         image.push('latest')
                     }
-                    sh 'ssh docker.tanndev.com rm -f eclancy-compose.yml'
-                    sh 'scp docker-compose.yml docker.tanndev.com:eclancy-compose.yml'
-                    sh 'ssh docker.tanndev.com docker-compose -f eclancy-compose.yml pull app'
-                    sh 'ssh docker.tanndev.com docker-compose -f eclancy-compose.yml up -d'
+                    sh 'ssh docker.tanndev.com rm -rf eclancy'
+                    sh 'ssh docker.tanndev.com mkdir eclancy'
+                    sh 'scp docker-compose.yml docker.tanndev.com:eclancy/'
+                    sh 'ssh docker.tanndev.com "cd eclancy && docker-compose pull app"'
+                    sh 'ssh docker.tanndev.com "cd eclancy && docker-compose up -d"'
                 }
                 slackSend channel: '@ericlclancy', color: 'good', message: 'Successfully published <https://eclancy.tanndev.com|your website>.'
             }
