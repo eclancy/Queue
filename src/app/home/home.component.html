@@ -1,3 +1,40 @@
-<p>
-  home works!
-</p>
+<h1 [ngStyle]="{
+  'color': h1Style ? 'gray' : 'black',
+  'font-size': !h1Style ? '1em' : '4em'
+}">Home</h1>
+
+<!-- These are other events you can use
+(focus)="testFunction()"
+(blur)="testFunction()" 
+(submit)="testFunction()"  
+(scroll)="testFunction()"
+
+(cut)="testFunction()"
+(copy)="testFunction()"
+(paste)="testFunction()"
+
+(keydown)="testFunction()"
+(keypress)="testFunction()"
+(keyup)="testFunction()"
+
+(mouseenter)="testFunction()"
+(mousedown)="testFunction()"
+(mouseup)="testFunction()"
+
+(click)="testFunction()"
+(dblclick)="testFunction()"
+
+(drag)="testFunction()"
+(dragover)="testFunction()"
+(drop)="testFunction()" 
+-->
+
+
+<button (click)="testFunction()" (enter)="testFunction()" (dragover)="testFunction()">Click Me</button>
+
+<ul *ngIf="users">
+  <li *ngFor="let user of users | slice:0:10;">
+    <img [src]="user.thumbnailUrl" >
+    <p>{{user.title}}</p>
+  </li>
+</ul>
