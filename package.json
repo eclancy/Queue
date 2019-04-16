@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "express": "node app.js"
   },
   "private": true,
   "dependencies": {
@@ -20,8 +21,13 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
+    "docker": "^1.0.0",
+    "express": "^4.16.4",
+    "http-errors": "^1.7.2",
+    "morgan": "^1.9.1",
     "rxjs": "~6.3.3",
     "scss": "^0.2.4",
+    "serve-favicon": "^2.5.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },
@@ -37,7 +43,7 @@
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.0.0",
-    "karma-chrome-launcher": "~2.2.0",
+    "karma-chrome-launpmncher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",

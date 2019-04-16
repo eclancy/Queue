@@ -8,8 +8,9 @@ RUN npm install --production
 
 # Get the rest of the code
 COPY . .
+RUN npm run build --prod
 
 # Start the server
-CMD [ "npm", "start" ]
+CMD [ "npm", "run", "express" ]
 
 

@@ -8,7 +8,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-
                 // Build the image.
                 script {
                     image = docker.build("jftanner/eclancy")
