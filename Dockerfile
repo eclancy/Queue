@@ -13,5 +13,3 @@ RUN npm run build --prod
 
 # Start the server
 CMD [ "npm", "run", "express" ]
-
-
