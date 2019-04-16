@@ -4,7 +4,8 @@ WORKDIR '/usr/src/eclancy'
 
 # Install dependencies
 COPY package*.json ./
-RUN npm install --production
+RUN npm install 
+# --production
 
 # Get the rest of the code
 COPY . .
