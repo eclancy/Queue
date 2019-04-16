@@ -21,7 +21,6 @@
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
-    "docker": "^1.0.0",
     "express": "^4.16.4",
     "http-errors": "^1.7.2",
     "morgan": "^1.9.1",
