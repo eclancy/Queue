@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 
-// Set up logger.
+// Set up logger
 app.use(logger('dev'));
 
 // app.use(favicon(path.join(__dirname, '<PATH TO FAVICON>.ico'))); // TODO Uncomment when you have a favicon.
