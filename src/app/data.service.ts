@@ -8,7 +8,19 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getUsers() {
-    return this.http.get('https://jsonplaceholder.typicode.com/photos');
+  // getUsers() {
+  //   return this.http.get('https://jsonplaceholder.typicode.com/photos');
+  // }
+
+  static users = [];
+
+  static addUser(name: string) {
+    this.users.push({name});
   }
+
+  getUsers() {
+    return DataService.users;
+  }
+
+  
 }

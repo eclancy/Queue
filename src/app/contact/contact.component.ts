@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,21 +10,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
 
   messageForm: FormGroup;
-  submitted: Boolean = false;
-  success: Boolean = false
+  submitted = false;
+  success = false;
 
   constructor(private formBuilder: FormBuilder) {
     this.messageForm = this.formBuilder.group({
-      name: ['', Validators.required],
-      message: ['', Validators.required]
-
-    })
+      name: ['', Validators.required]
+      // message: ['', Validators.required]
+    });
    }
 
    onSubmit(){
      this.submitted = true;
      if (this.messageForm.valid) {
-      this.success = true;
+       DataService.addUser(this.messageForm.controls.name.value);
+       this.success = true;
      }
      return;
    }

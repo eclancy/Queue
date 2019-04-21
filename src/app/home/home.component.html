@@ -1,7 +1,7 @@
 <h1 [ngStyle]="{
   'color': h1Style ? 'gray' : 'black',
   'font-size': !h1Style ? '1em' : '4em'
-}">Home</h1>
+}">Queue</h1>
 
 <!-- These are other events you can use
 (focus)="testFunction()"
@@ -29,12 +29,19 @@
 (drop)="testFunction()" 
 -->
 
+<!-- <button (click)="testFunction()" (enter)="testFunction()" (dragover)="testFunction()">Click Me</button> -->
 
-<button (click)="testFunction()" (enter)="testFunction()" (dragover)="testFunction()">Click Me</button>
+<button routerLink="/contact">Add to queue</button>
 
-<ul *ngIf="users">
-  <li *ngFor="let user of users | slice:0:10;">
-    <img [src]="user.thumbnailUrl" >
-    <p>{{user.title}}</p>
+<ul *ngIf="this.data.getUsers()">
+  <li *ngFor="let user of this.data.getUsers() | slice:0:10; let i = index;">
+    <strong>{{i}}</strong>
+    <p>{{user.name}}</p>
   </li>
 </ul>
+
+<div *ngIf="this.data.getUsers().length === 0">
+    <p>No one in queue</p> 
+</div> 
+
+<button (click)="test()">Test</button>

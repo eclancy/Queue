@@ -8,26 +8,19 @@ import {DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  h1Style: boolean = false;
+  h1Style = false;
 
   constructor(private data: DataService) { }
 
-  users: Object;
+  users: object[];
 
   ngOnInit() {
-    this.data.getUsers().subscribe(data => {
-      this.users = data;
-      console.log(this.users);
-    });
-  }
-
-  testFunction() {
-    console.log('clicked');
-    this.h1Style = true;
-  }
-
-  serviceFunction() {
-    this.data.getUsers();
+    // TODO: retrieve data from database & save to database
+    // this.data.getUsers().subscribe(data => {
+    //   this.users = data;
+    //   console.log(this.users);
+    // });
   }
 
 }
+

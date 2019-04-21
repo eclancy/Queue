@@ -1,31 +1,24 @@
-<h1>Contact Us </h1>
+<h1>Add to queue</h1>
 
 <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
 
-<h5 *ngIf="success">Your form is valid!</h5>
-<label >
-  Name: 
-  <input type="text" formControlName="name">
-  <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
-    <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
-  </div>
-</label>
+  <h5 *ngIf="success">You were added!</h5>
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+    <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
+      <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
+    </div>
+  </label>
 
-<label>
+  <!-- <label>
   Message:
   <textarea formControlName="message"></textarea>
   <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
       <div *ngIf="messageForm.controls.message.errors.required">Your name is required</div>
     </div>
-</label>
+</label> -->
 
-<input type="submit" value="Send Message" class="cta">
+  <input type="submit" value="Submit" class="cta">
 
 </form>
-<div *ngIf="submitted" class="results">
-  <strong>Name: </strong>
-  {{messageForm.controls.name.value}}
-
-  <strong>Message: </strong>
-  {{messageForm.controls.message.value}}
-</div>
