@@ -23,7 +23,7 @@ export class ContactComponent implements OnInit {
    onSubmit(){
      this.submitted = true;
      if (this.messageForm.valid) {
-       DataService.addUser(this.messageForm.controls.name.value);
+       DataService.addUser({name: this.messageForm.controls.name.value});
        this.success = true;
      }
      return;

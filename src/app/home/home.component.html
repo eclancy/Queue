@@ -33,14 +33,14 @@
 
 <button routerLink="/contact">Add to queue</button>
 
-<ul *ngIf="this.data.getUsers()">
-  <li *ngFor="let user of this.data.getUsers() | slice:0:10; let i = index;">
+<ul *ngIf="users">
+  <li *ngFor="let user of users; let i = index;">
     <strong>{{i}}</strong>
-    <p>{{user.name}}</p>
+    <p>{{user.name | slice:0:10}}</p>
   </li>
 </ul>
 
-<div *ngIf="this.data.getUsers().length === 0">
+<div *ngIf="users.length === 0">
     <p>No one in queue</p> 
 </div> 
 

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import { User } from './models/user';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,15 +14,14 @@ export class DataService {
   //   return this.http.get('https://jsonplaceholder.typicode.com/photos');
   // }
 
-  static users = [];
+  static users: User[] = [];
 
-  static addUser(name: string) {
-    this.users.push({name});
+  static addUser(user: User) {
+    this.users.push(user);
   }
 
   getUsers() {
-    return DataService.users;
+    return of(DataService.users);
   }
 
-  
 }

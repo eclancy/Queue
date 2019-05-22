@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService } from '../data.service';
+import { DataService } from '../data.service';
+
+import { User } from '../models/user';
 
 @Component({
   selector: 'app-home',
@@ -12,14 +14,14 @@ export class HomeComponent implements OnInit {
 
   constructor(private data: DataService) { }
 
-  users: object[];
+  users: User[] = [];
 
   ngOnInit() {
     // TODO: retrieve data from database & save to database
-    // this.data.getUsers().subscribe(data => {
-    //   this.users = data;
-    //   console.log(this.users);
-    // });
+    this.data.getUsers().subscribe(data => {
+      this.users = data;
+      console.log(this.users);
+    });
   }
 
 }
