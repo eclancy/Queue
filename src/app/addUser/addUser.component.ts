@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: 'app-addUser',
+  templateUrl: './addUser.component.html',
+  styleUrls: ['./addUser.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class AddUserComponent implements OnInit {
 
   messageForm: FormGroup;
   submitted = false;
