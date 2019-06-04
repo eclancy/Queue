@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+import { AddUserComponent } from './addUser/addUser.component';
 
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { NgModule } from '@angular/core';
@@ -16,7 +16,7 @@ import { NgModule } from '@angular/core';
     AppComponent,
     NavComponent,
     HomeComponent,
-    ContactComponent
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
