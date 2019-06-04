@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,15 +18,15 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
     NavComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent,
-    MatButtonModule,
-    MatCheckboxModule,
-    ReactiveFormsModule
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
