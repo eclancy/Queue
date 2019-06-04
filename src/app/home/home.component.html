@@ -3,7 +3,9 @@
   'font-size': !h1Style ? '1em' : '4em'
 }">Queue</h1>
 
-<button routerLink="/addUser">Add to queue</button>
+<div>
+  <i routerLink="/addUser" class="material-icons" id="add-button"> add_circle</i>
+</div>
 
 <ul *ngIf="users">
   <li *ngFor="let user of users; let i = index;">
@@ -13,5 +15,5 @@
 </ul>
 
 <div *ngIf="users.length === 0">
-    <p>No one in queue</p> 
-</div> 
+  <p>No one in queue</p>
+</div>
