@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import { NgModule } from '@angular/core';
 
 @NgModule({
   declarations: [
