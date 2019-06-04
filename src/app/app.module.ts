@@ -18,15 +18,15 @@ import { NgModule } from '@angular/core';
     NavComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent,
-    MatButtonModule,
-    MatCheckboxModule,
-    ReactiveFormsModule
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
