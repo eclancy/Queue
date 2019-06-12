@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(private data: DataService) { }
 
   users: User[] = [];
+  // users: Array<User>;
 
   ngOnInit() {
     // TODO: retrieve data from database & save to database
@@ -24,5 +25,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  onSeatClick(i: number): void {
+    this.users.splice(i, 1);
+  }
 }
 

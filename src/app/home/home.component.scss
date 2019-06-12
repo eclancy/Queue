@@ -26,6 +26,10 @@ ul {
             border-radius: 50%;
             width: 100%;
         }
+        button:hover {
+            color: lightgreen;
+            background: green;
+        }
     }
 }
 
@@ -38,3 +42,4 @@ ul {
     cursor: pointer;
 
 }
+

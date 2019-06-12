@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,8 +9,16 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { AddUserComponent } from './addUser/addUser.component';
 
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import { NgModule } from '@angular/core';
+import {
+  MatButtonModule, 
+  MatCheckboxModule,
+  MatIconModule,
+  MatTooltipModule
+} from '@angular/material';
+
+import {
+  BrowserAnimationsModule
+} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,7 +33,10 @@ import { NgModule } from '@angular/core';
     HttpClientModule,
     MatButtonModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatIconModule,
+    MatTooltipModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
