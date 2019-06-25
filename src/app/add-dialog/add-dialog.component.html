@@ -1,0 +1,18 @@
+<h2>Add to queue</h2>
+
+<form [formGroup]="addDialogForm">
+
+  <label>
+    Name:
+    <input type="text" formControlName="name">
+    <div *ngIf="addDialogForm?.controls.name.errors" class="error">
+      <div *ngIf="addDialogForm?.controls.name.errors.required">A name is required</div>
+    </div>
+  </label>
+
+  <mat-dialog-actions style="flex-direction: row; justify-content: flex-end;">
+    <button mat-button [mat-dialog-close]="true"> Save </button>
+    <button mat-button mat-dialog-close> Cancel </button>
+  </mat-dialog-actions>
+
+</form>

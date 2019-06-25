@@ -13,19 +13,23 @@ import {
   MatButtonModule, 
   MatCheckboxModule,
   MatIconModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatDialogModule,
+  MatListModule
 } from '@angular/material';
 
 import {
   BrowserAnimationsModule
 } from '@angular/platform-browser/animations';
+import { AddDialogComponent } from './add-dialog/add-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HomeComponent,
-    AddUserComponent
+    AddUserComponent,
+    AddDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +40,12 @@ import {
     ReactiveFormsModule,
     MatIconModule,
     MatTooltipModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AddDialogComponent]
 })
 export class AppModule { }
