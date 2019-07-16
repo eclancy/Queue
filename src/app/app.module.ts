@@ -15,7 +15,8 @@ import {
   MatIconModule,
   MatTooltipModule,
   MatDialogModule,
-  MatListModule
+  MatListModule,
+  MatSnackBarModule
 } from '@angular/material';
 
 import {
@@ -42,7 +43,8 @@ import { AddDialogComponent } from './add-dialog/add-dialog.component';
     MatTooltipModule,
     BrowserAnimationsModule,
     MatDialogModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

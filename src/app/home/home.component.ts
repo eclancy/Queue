@@ -5,6 +5,7 @@ import { User } from '../models/user';
 import { AddDialogComponent } from '../add-dialog/add-dialog.component';
 import { MatDialog } from '@angular/material';
 import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private data: DataService, 
     public dialog: MatDialog,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private _snackBar: MatSnackBar
     ) { 
       this.addDialogForm = this.formBuilder.group({
         name: ['', Validators.required]
@@ -49,10 +51,18 @@ export class HomeComponent implements OnInit {
       data: this.addDialogForm
     });
 
-    dialogRef.afterClosed().subscribe((result: boolean) => {
+    dialogRef.afterClosed()
+    .subscribe((result: boolean) => {
       if (result) {
         DataService.addUser({name: this.addDialogForm.controls.name.value});
+        this.openSnackBar();
       }
+    });
+  }
+
+  openSnackBar() {
+    this._snackBar.open('Seat in queue created!', 'Close', {
+      duration: 2000,
     });
   }
 }
