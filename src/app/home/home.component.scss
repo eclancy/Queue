@@ -33,6 +33,21 @@ ul {
     }
 }
 
+.party-card{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+
+    .party-info{
+        height: 20px;
+       
+
+        .queue-number{
+          margin-right: 20px;
+        }  
+    }
+}
+
 #add-button{
     position: absolute;
     bottom: 10px;

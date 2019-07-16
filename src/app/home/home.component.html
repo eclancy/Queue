@@ -4,10 +4,9 @@
 }">Queue</h1>
 
 <ul *ngIf="users">
-  <li *ngFor="let user of users; let i = index;" style="display: flex; flex-direction: row; justify-content: space-between">
-    <!-- <p><strong>{{i}}</strong>{{user.name | slice:0:10}}<button mat-icon-button><mat-icon>check</mat-icon></button></p> -->
-      <span>
-        <strong style="margin-right: 20px;">{{i}}</strong>
+  <li *ngFor="let user of users; let i = index;" class="party-card">
+      <span class="party-info">
+        <strong class="queue-number">{{i}}</strong>
         {{user.name | slice:0:10}}
       </span>
       <button mat-icon-button style="justify-content: flex-end" matTooltip="Seat Party" aria-label="A button with a thing" (click)="onSeatClick(i)"><mat-icon>check</mat-icon></button>
